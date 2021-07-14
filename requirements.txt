@@ -3,3 +3,4 @@ streamlit==0.84.0
 numpy==1.19.5
 matplotlib==3.4.2
 tensorflow_datasets==4.3.0
+tensorflow_text==2.5.0
