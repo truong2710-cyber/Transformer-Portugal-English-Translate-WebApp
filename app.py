@@ -428,11 +428,11 @@ def print_translation(sentence, tokens, ground_truth):
 
 
 st.write("""
-         # Machine Translation: Portugal to English
+         # Machine Translation: Portuguese to English
          """
          )
-st.write("This is a simple translation web app")
-user_input=st.text_input("Portugal")
+st.write("This is a simple translation web app created using Transformer model :>")
+user_input=st.text_input("Portuguese")
 translated_text, translated_tokens, attention_weights = evaluate(user_input)
 out=st.text_area(label="English",value=translated_text.numpy().decode("utf-8"))
 
