@@ -367,7 +367,7 @@ def create_masks(inp, tar):
   combined_mask = tf.maximum(dec_target_padding_mask, look_ahead_mask)
 
   return enc_padding_mask, combined_mask, dec_padding_mask
-checkpoint_path = "D:/TranslatePt_En app/checkpoints/train"
+checkpoint_path = "./checkpoints/train"
 
 ckpt = tf.train.Checkpoint(transformer=transformer,
                            optimizer=optimizer)
@@ -375,7 +375,7 @@ ckpt = tf.train.Checkpoint(transformer=transformer,
 ckpt_manager = tf.train.CheckpointManager(ckpt, checkpoint_path, max_to_keep=5)
 
 # if a checkpoint exists, restore the latest checkpoint.
-ckpt.restore("D:/TranslatePt_En app/checkpoints/train/ckpt-24")
+ckpt.restore("./checkpoints/train/ckpt-24")
 
 def evaluate(sentence, max_length=40):
   # inp sentence is portuguese, hence adding the start and end token
