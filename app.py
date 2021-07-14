@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import tensorflow_datasets as tfds
-import tensorflow_text as text
+#import tensorflow_text as text
 import tensorflow as tf
 
 model_name = "ted_hrlr_translate_pt_en_converter"
